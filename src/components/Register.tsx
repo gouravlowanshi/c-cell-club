@@ -46,7 +46,7 @@ export default function Register() {
     const errs = validate(form);
     if (Object.keys(errs).length > 0) { setErrors(errs); return; }
 
-    await fetch("http://localhost:8080/studentDetails/register", {
+    await fetch("https://c-cell-backend-production.up.railway.app/studentDetails/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)
